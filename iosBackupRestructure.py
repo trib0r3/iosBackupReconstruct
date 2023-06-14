@@ -43,7 +43,7 @@ def main() -> None:
     backup = argv[1]
     output = argv[2]
     if not os.path.exists(backup) or os.path.exists(output) and len(os.listdir(output)) > 0:
-        print("Invalid backup directory or not empty:", backup)
+        print("Invalid backup directory or not empty output directory:", backup)
         return
     
     os.makedirs(output, exist_ok=True)
